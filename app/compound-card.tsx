@@ -4,11 +4,10 @@ import CardThree from "./(cards)/card-3"
 import CardFour from "./(cards)/card-4"
 import CardFive from "./(cards)/card-5"
 
-const CompoundCards = ({ font }: { font: string }) => {
-  //   console.log(`Font ${font}`)
+const CompoundCards = ({ className }: React.ComponentProps<"div">) => {
   return (
     <>
-      <div className={`mb-10 ${font}`}>
+      <div className={`mb-10 ${className}`}>
         <div className="flex justify-center">
           <CardFour />
           <CardTwo />

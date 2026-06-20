@@ -33,6 +33,10 @@ const data = {
       url: "/",
       items: [
         {
+          title: "Normal Font",
+          url: "/fonts/normal-font",
+        },
+        {
           title: "Barriecito",
           url: "/fonts/font-barriecito",
         },

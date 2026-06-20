@@ -1,17 +1,9 @@
 import CompoundCards from "../../compound-card"
 
-export default async function page({
-  params,
-}: {
-  params: Promise<{ font: string }>
-}) {
-  const { font } = await params
-
-  console.log(`Font name is ${font}`)
-
+export default async function page() {
   return (
     <>
-      <CompoundCards font={font} />
+      <CompoundCards />
     </>
   )
 }

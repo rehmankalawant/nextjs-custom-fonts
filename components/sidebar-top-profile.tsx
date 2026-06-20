@@ -5,15 +5,21 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { ChevronsUpDownIcon } from "lucide-react"
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
 import Image from "next/image"
+import { Button } from "./ui/button"
 
 export function SideBarTopProfile() {
+  const { theme, setTheme } = useTheme()
   return (
     <>
       <SidebarMenu>
         <SidebarMenuItem>
           <SidebarMenuButton
+            onClick={() => {
+              setTheme(theme === "light" ? "dark" : "light")
+            }}
             size="lg"
             className="gap-4 data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
           >
@@ -29,7 +35,15 @@ export function SideBarTopProfile() {
             <div className="flex flex-col gap-1 leading-none">
               <span className="font-medium">Rehman Kalawant</span>
             </div>
-            <ChevronsUpDownIcon className="ml-auto" />
+            {theme === "light" ? (
+              <Button className="ml-auto rounded-sm" variant={"outline"} size={"icon-sm"}>
+                <Sun />
+              </Button>
+            ) : (
+              <Button className="ml-auto rounded-sm" variant={"outline"} size={"icon-sm"}>
+                <Moon />
+              </Button>
+            )}
           </SidebarMenuButton>
         </SidebarMenuItem>
       </SidebarMenu>{" "}
