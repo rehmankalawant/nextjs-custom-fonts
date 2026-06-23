@@ -22,7 +22,7 @@ const AboutMe = () => {
             alt="About"
             width={100}
             height={100}
-            className="size-60 rounded-md border-2 border-secondary bg-blue-300 dark:bg-yellow-300"
+            className="size-60 rounded-md border-2 border-secondary bg-blue-300 dark:bg-yellow-300 grayscale hover:grayscale-0 duration-500"
           />
           <div className="mt-4">
             <h3 className="text-2xl font-bold">Rehman Kalawant</h3>
@@ -42,6 +42,7 @@ const AboutMe = () => {
                         width={40}
                         height={20}
                         alt="skill"
+                        className="grayscale hover:grayscale-0 duration-400"
                       />
                     </div>
                   </TooltipTrigger>
