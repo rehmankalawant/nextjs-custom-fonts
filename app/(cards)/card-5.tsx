@@ -10,14 +10,13 @@ import Link from "next/link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { ButtonGroup } from "@/components/ui/button-group"
-import {
-  IconArrowUpRight,
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandX,
-  IconWorld,
-} from "@tabler/icons-react"
+import X from "@/public/icons/x"
+import LinkedIn from "@/public/icons/linkedin"
+import GitHub from "@/public/icons/github"
+import Portfolio from "@/public/icons/portfolio"
 import { Separator } from "@/components/ui/separator"
+import Image from "next/image"
+import { SquareArrowOutUpRight } from "lucide-react"
 
 const CardFive = () => {
   return (
@@ -88,21 +87,21 @@ const CardFive = () => {
           >
             <ButtonGroup>
               <Button size="sm" variant="outline">
-                <IconBrandGithub stroke={2} />
+                <GitHub className="h-7 w-7 text-black dark:text-white" />
               </Button>
               <Button size="sm" variant="outline">
                 GitHub
               </Button>
               <Button size="sm" variant="outline" asChild>
                 <Link href="https://github.com/rehmankalawant" target="_blank">
-                  <IconArrowUpRight stroke={2} />
+                  <SquareArrowOutUpRight />
                 </Link>
               </Button>
             </ButtonGroup>
 
             <ButtonGroup>
               <Button size="sm" variant="outline">
-                <IconBrandLinkedin stroke={2} />
+                <LinkedIn className="h-6 w-6 text-[#0A66C2]" />
               </Button>
               <Button size="sm" variant="outline">
                 LinkedIn
@@ -112,35 +111,35 @@ const CardFive = () => {
                   href="https://linkedin.com/in/rehmankalawant"
                   target="_blank"
                 >
-                  <IconArrowUpRight stroke={2} />
+                  <SquareArrowOutUpRight />
                 </Link>
               </Button>
             </ButtonGroup>
 
             <ButtonGroup>
               <Button size="sm" variant="outline">
-                <IconBrandX stroke={2} />
+                <X />
               </Button>
               <Button size="sm" variant="outline">
                 X
               </Button>
               <Button size="sm" variant="outline" asChild>
                 <Link href="https://x.com/rehman3001" target="_blank">
-                  <IconArrowUpRight stroke={2} />
+                  <SquareArrowOutUpRight />
                 </Link>
               </Button>
             </ButtonGroup>
 
             <ButtonGroup>
               <Button size="sm" variant="outline">
-                <IconWorld stroke={2} />
+                <Portfolio className="h-6 w-6 text-[#36CFCC]" />
               </Button>
               <Button size="sm" variant="outline">
                 Portfolio
               </Button>
               <Button size="sm" variant="outline" asChild>
                 <Link href="https://rehmankalawant.vercel.app" target="_blank">
-                  <IconArrowUpRight stroke={2} />
+                  <SquareArrowOutUpRight />
                 </Link>
               </Button>
             </ButtonGroup>
