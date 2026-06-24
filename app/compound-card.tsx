@@ -7,7 +7,7 @@ import CardFive from "./(cards)/card-5"
 const CompoundCards = ({ className }: React.ComponentProps<"div">) => {
   return (
     <>
-      <div className={`mb-10 px-10 py-6 ${className}`}>
+      <div className={`mb-10 px-10 py-5 ${className}`}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
           <div className="md:col-span-8">
             <CardFour />
