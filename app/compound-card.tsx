@@ -7,15 +7,24 @@ import CardFive from "./(cards)/card-5"
 const CompoundCards = ({ className }: React.ComponentProps<"div">) => {
   return (
     <>
-      <div className={`mb-10 ${className}`}>
-        <div className="flex justify-center">
-          <CardFour />
-          <CardTwo />
-        </div>
-        <div className="flex justify-start">
-          <CardOne />
-          <CardThree />
-          <CardFive />
+      <div className={`mb-10 px-10 py-6 ${className}`}>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
+          <div className="md:col-span-8">
+            <CardFour />
+
+            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+              <CardOne />
+              <CardThree />
+            </div>
+          </div>
+
+          <div className="md:col-span-4">
+            <CardTwo />
+
+            <div className="mt-6">
+              <CardFive />
+            </div>
+          </div>
         </div>
       </div>
     </>

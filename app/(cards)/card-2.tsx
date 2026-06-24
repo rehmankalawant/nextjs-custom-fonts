@@ -14,7 +14,7 @@ const CardTwo = () => {
   return (
     <>
       <>
-        <Card className="mx-auto h-fit w-1/4 max-w-[45%]">
+        <Card className="h-fit w-full">
           <CardHeader>
             <CardTitle>Notifications</CardTitle>
             <CardDescription>
@@ -84,7 +84,7 @@ const CardTwo = () => {
                   </Field>
                 </Field>
 
-                {/* <Field orientation="horizontal" className="items-start gap-3">
+                <Field orientation="horizontal" className="items-start gap-3">
                 <Checkbox id="market-updates" name="market-updates" />
 
                 <Field orientation="vertical" className="gap-1">
@@ -96,7 +96,7 @@ const CardTwo = () => {
                     News and trends related to your investments.
                   </p>
                 </Field>
-              </Field> */}
+              </Field>
               </FieldGroup>
             </FieldSet>
           </CardContent>

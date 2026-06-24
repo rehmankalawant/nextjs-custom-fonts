@@ -22,8 +22,8 @@ import { ChevronUp, Search } from "lucide-react"
 const CardOne = () => {
   return (
     <>
-      <div className="mt- ms-auto h-fit w-1/4 max-w-[29%]">
-        <Card className="p-5">
+      <div className="h-fit w-full">
+        <Card className="w-full p-5">
           {/* 1 */}
           <div className="flex justify-start gap-2">
             <Button size="sm" variant="default">

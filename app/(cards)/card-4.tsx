@@ -4,7 +4,7 @@ import Image from "next/image"
 const CardFour = () => {
   return (
     <>
-      <Card className="ms-auto h-fit w-3/4 max-w-[58%] overflow-hidden">
+      <Card className="h-fit w-full">
         <div className="flex flex-col md:flex-row">
           {/* Profile Section */}
           <div className="flex shrink-0 flex-col items-center justify-center gap-3 border-b p-2 md:w-72 md:border-r md:border-b-0">

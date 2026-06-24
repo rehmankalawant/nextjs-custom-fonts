@@ -22,7 +22,7 @@ import { Separator } from "@/components/ui/separator"
 const CardFive = () => {
   return (
     <>
-      <Card className="m-auto h-fit w-full max-w-sm overflow-hidden">
+      <Card className="h-fit w-full">
         <Tabs defaultValue="social">
           <TabsList className="mx-auto rounded-xl px-2 py-1">
             <TabsTrigger value="introduction">Introduction</TabsTrigger>

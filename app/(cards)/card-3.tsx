@@ -10,7 +10,7 @@ import Link from "next/link"
 const CardThree = () => {
   return (
     <>
-      <Card className="ms-auto h-fit w-1/4 max-w-[29%]">
+      <Card className="h-fit w-full">
         <CardHeader className="flex justify-center">
           <Link href="https://github.com/rehmankalawant" target="_blank">
             <Image
