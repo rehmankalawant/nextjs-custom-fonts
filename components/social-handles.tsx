@@ -12,7 +12,7 @@ const SocialHandles = () => {
   return (
     <>
       <div className="mb-8">
-        <Card className="h-fit w-fit p-3">
+        <Card className="h-fit w-fit p-3 rounded-full">
           <div className="flex flex-wrap items-center justify-center gap-3">
             <ButtonGroup>
               <Button size="sm" variant="outline">
