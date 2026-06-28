@@ -1,20 +1,12 @@
-// import * as React from "react"
-import { headers } from "next/headers"
 import { SearchForm } from "@/components/search-form"
 import { SideBarTopProfile } from "@/components/sidebar-top-profile"
+import { SidebarNav } from "@/components/sidebar-nav"
 import {
   Sidebar,
   SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar"
-import Link from "next/link"
 
 // This is sample data.
 const data = {
@@ -82,13 +74,9 @@ const data = {
   ],
 }
 
-export async function AppSidebar({
+export function AppSidebar({
   ...props
 }: React.ComponentProps<typeof Sidebar>) {
-  // For getting pathname on server side
-  const headersList = await headers()
-  const pathname = headersList.get("x-pathname")
-
   return (
     <Sidebar {...props}>
       <SidebarHeader>
@@ -96,22 +84,7 @@ export async function AppSidebar({
         <SearchForm />
       </SidebarHeader>
       <SidebarContent>
-        {data.navMain.map((item) => (
-          <SidebarGroup key={item.title}>
-            <SidebarGroupLabel>{item.title}</SidebarGroupLabel>
-            <SidebarGroupContent>
-              <SidebarMenu>
-                {item.items.map((item) => (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild isActive={pathname === item.url}>
-                      <Link href={item.url}>{item.title}</Link>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-        ))}
+        <SidebarNav items={data.navMain} />
       </SidebarContent>
       <SidebarRail />
     </Sidebar>
