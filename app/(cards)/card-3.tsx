@@ -13,13 +13,34 @@ const CardThree = () => {
       <Card className="h-fit w-full">
         <CardHeader className="flex justify-center">
           <Link href="https://github.com/rehmankalawant" target="_blank">
-            <Image
-              src="/github/github-qr.png"
-              alt="GitHub QR"
-              width={200}
-              height={200}
-              className="rounded-xl"
-            />
+            <div className="relative rounded-2xl p-2">
+  <svg
+    className="absolute inset-0 h-full w-full"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="1"
+      y="1"
+      width="calc(100% - 2px)"
+      height="calc(100% - 2px)"
+      rx="16"
+      ry="16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeDasharray="12 8"
+      className="text-muted-foreground"
+    />
+  </svg>
+
+  <Image
+    src="/github/github-qr.png"
+    alt="GitHub QR"
+    width={210}
+    height={210}
+    className="relative rounded-xl"
+  />
+</div>
           </Link>
         </CardHeader>
 
