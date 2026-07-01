@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import {
   Accordion,
@@ -6,17 +5,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import Link from "next/link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
-import { ButtonGroup } from "@/components/ui/button-group"
-import X from "@/public/icons/x"
-import LinkedIn from "@/public/icons/linkedin"
-import GitHub from "@/public/icons/github"
-import Portfolio from "@/public/icons/portfolio"
 import { Separator } from "@/components/ui/separator"
-import Image from "next/image"
-import { SquareArrowOutUpRight } from "lucide-react"
+import GithubButton from "@/components/social-buttons/github-button"
+import LinkedinButton from "@/components/social-buttons/linkedin-button"
+import TwitterButton from "@/components/social-buttons/twitter-button"
+import PortfolioButton from "@/components/social-buttons/portfolio-button"
 
 const CardFive = () => {
   return (
@@ -85,64 +80,10 @@ const CardFive = () => {
             value="social"
             className="flex flex-wrap justify-center gap-2 space-y-3 py-1"
           >
-            <ButtonGroup>
-              <Button size="sm" variant="outline">
-                <GitHub className="h-7 w-7 text-black dark:text-white" />
-              </Button>
-              <Button size="sm" variant="outline">
-                GitHub
-              </Button>
-              <Button size="sm" variant="outline" asChild>
-                <Link href="https://github.com/rehmankalawant" target="_blank">
-                  <SquareArrowOutUpRight />
-                </Link>
-              </Button>
-            </ButtonGroup>
-
-            <ButtonGroup>
-              <Button size="sm" variant="outline">
-                <LinkedIn className="h-6 w-6 text-[#0A66C2]" />
-              </Button>
-              <Button size="sm" variant="outline">
-                LinkedIn
-              </Button>
-              <Button size="sm" variant="outline" asChild>
-                <Link
-                  href="https://linkedin.com/in/rehmankalawant"
-                  target="_blank"
-                >
-                  <SquareArrowOutUpRight />
-                </Link>
-              </Button>
-            </ButtonGroup>
-
-            <ButtonGroup>
-              <Button size="sm" variant="outline">
-                <X />
-              </Button>
-              <Button size="sm" variant="outline">
-                X
-              </Button>
-              <Button size="sm" variant="outline" asChild>
-                <Link href="https://x.com/rehman3001" target="_blank">
-                  <SquareArrowOutUpRight />
-                </Link>
-              </Button>
-            </ButtonGroup>
-
-            <ButtonGroup>
-              <Button size="sm" variant="outline">
-                <Portfolio className="h-6 w-6 text-[#36CFCC]" />
-              </Button>
-              <Button size="sm" variant="outline">
-                Portfolio
-              </Button>
-              <Button size="sm" variant="outline" asChild>
-                <Link href="https://rehmankalawant.vercel.app" target="_blank">
-                  <SquareArrowOutUpRight />
-                </Link>
-              </Button>
-            </ButtonGroup>
+            <GithubButton />
+            <LinkedinButton />
+            <TwitterButton />
+            <PortfolioButton />
           </TabsContent>
         </Tabs>
       </Card>
